@@ -84,5 +84,10 @@ namespace EstuSozlukAPI.Data
                 return false;
             }
         }
+        public User GetUserById(int userId)
+        {
+            var user = _context.Users.Include(e => e.Answers).Include(e => e.Entries).FirstOrDefault(e => e.Id == userId);
+            return user;
+        }
     }
 }

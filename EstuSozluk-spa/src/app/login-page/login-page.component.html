@@ -1,0 +1,18 @@
+<main role="form">
+<div class="container text-center">
+<h1>Estü Sözlük</h1>
+  <form  #loginForm="ngForm" (ngSubmit)="login()" class="  my-lg-2">
+    <div class="form-group ">
+    <input class="form-control lead" name="userName"
+    [(ngModel)]="loginUser.userName" required type="text" placeholder="Kullanıcı Adı">
+    </div>
+    <div class="form-group">
+    <input class="form-control lead" name="password"
+    [(ngModel)]="loginUser.password" required type="password" placeholder="Şifre">
+    </div>
+    <button class="btn btn-info form-control"    type="submit">Giriş</button>
+  </form>
+  <a class="nav-link btn btn-warning" routerLink="/register">Kayıt ol</a>
+
+</div>
+</main>

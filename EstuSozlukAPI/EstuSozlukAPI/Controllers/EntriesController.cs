@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace EstuSozlukAPI.Controllers
@@ -39,9 +40,16 @@ namespace EstuSozlukAPI.Controllers
         [Route("add")]
         public ActionResult Add([FromBody]Entry entry)
         {
+            /*var currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+
+            if (currentUserId != entry.UserId)
+            {
+                return Unauthorized();
+            }*/
             entry.Date = DateTime.Now;
             _appRepository.Add(entry);
             _appRepository.SaveAll();
+           
             return Ok(entry);
         }
 

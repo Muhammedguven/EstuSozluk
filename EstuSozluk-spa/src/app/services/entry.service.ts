@@ -20,7 +20,7 @@ export class EntryService {
   }
   getAnswersByEntry(entryId: number): Observable<Answer[]> {
     return this.httpClient.get<Answer[]>(
-      this.path + 'entries/answers/?entryId=' + entryId
+      this.path + 'answers/detail/?id=' + entryId
     );
   }
 

@@ -26,7 +26,7 @@ namespace EstuSozlukAPI.Controllers
         [Route("detail")]
         public ActionResult GetAnswers(int id)
         {
-            var answer = _appRepository.GetAnswer(id);
+            var answer = _appRepository.GetAnswersByEntry(id);
             return Ok(answer);
         }
 

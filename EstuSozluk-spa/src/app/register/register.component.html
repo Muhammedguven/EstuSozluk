@@ -1,0 +1,34 @@
+<main role="form">
+  <div class="container text-center">
+<form [formGroup]="registerForm" (ngSubmit)="register()" class="form-register">
+  <h2 class="mt-5">Kayıt ol</h2>
+  <div class="form-group">
+    <input type="text" id="userName" name="userName" formControlName="userName" class="form-control" placeholder="Kullanıcı adı"
+      autofocus>
+  </div>
+  <div class="form-group">
+    <input type="text" id="email" type="email" name="email" formControlName="email" class="form-control" placeholder="Email"
+      autofocus>
+  </div>
+  <div class="form-group">
+    <select type="text" id="faculty" name="faculty" formControlName="faculty" class="form-control"
+      autofocus>
+      <option value="" selected disabled>Fakülte</option>
+      <option value="Mühendislik">Mühendislik</option>
+      <option value="Havacılık">Havacılık</option>
+      <option value="BESYO">BESYO</option>
+      <option value="HAZIRLIK">HAZIRLIK</option>
+  </select>
+  </div>
+  <div class="form-group">
+    <input type="password" id="password" name="password" formControlName="password" class="form-control" placeholder="Şifre">
+  </div>
+  <div class="form-group">
+    <input type="password" id="confirmPassword" name="confirmPassword" formControlName="confirmPassword" class="form-control"
+      placeholder="Şifre">
+
+  </div>
+  <button class="btn btn-lg btn-info btn-block" [disabled]="!registerForm.valid" type="submit">Register</button>
+</form>
+</div>
+</main>

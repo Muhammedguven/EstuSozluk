@@ -76,5 +76,13 @@ namespace EstuSozlukAPI.Controllers
 
             return Ok(tokenString);
         }
+        [HttpGet]
+        [Route("detail")]
+        public ActionResult GetUsersById(int id)
+        {
+            var entry = _authRepositoy.GetUserById(id);
+            return Ok(entry);
+        }
+
     }
 }

@@ -1,3 +1,4 @@
+import { LoginPageComponent } from './login-page/login-page.component';
 import { appRoutes } from './routes';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -9,23 +10,29 @@ import { EntryComponent } from './entry/entry.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EntryDetailComponent } from './entry-detail/entry-detail.component';
 import { EntryAddComponent } from './entry-add/entry-add.component';
-import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AlertifyService } from './services/alertify.service';
+import { RegisterComponent } from './register/register.component';
+
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
-      NavComponent,
-      EntryComponent,
-      EntryDetailComponent,
-      EntryAddComponent
+    NavComponent,
+    EntryComponent,
+    EntryDetailComponent,
+    EntryAddComponent,
+    LoginPageComponent,
+      RegisterComponent
    ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule, ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes)
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes),
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [AlertifyService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

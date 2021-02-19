@@ -10,6 +10,8 @@ import {
   FormBuilder,
 } from '@angular/forms';
 import { AnswerService } from '../services/answer.service';
+import { AlertifyService } from '../services/alertify.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-entry-detail',
@@ -22,7 +24,9 @@ export class EntryDetailComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private entryService: EntryService,
     private answerService: AnswerService,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private alertifyService:AlertifyService,
+    private authService: AuthService
   ) {}
   entry!: Entry;
   answer!: Answer;
@@ -55,9 +59,15 @@ export class EntryDetailComponent implements OnInit {
   addAnswer() {
     if (this.answerAddForm.valid) {
       this.answer = Object.assign({}, this.answerAddForm.value);
-      this.answer.userId = 1;
+      this.answer.userId = this.authService.getCurrentUserId().toString();
       this.answer.entryId = this.entry.id;
       this.answerService.addAnswer(this.answer);
+      this.alertifyService.success("Cevap başarıyla gönderildi!");
+      this.answerAddForm.reset();
+
+    }
+    else{
+      this.alertifyService.warning("Bir hata oluştu!");
     }
 
   }

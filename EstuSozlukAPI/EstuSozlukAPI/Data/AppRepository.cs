@@ -40,7 +40,7 @@ namespace EstuSozlukAPI.Data
 
         public List<Entry> GetEntries()
         {
-            var entries = _context.Entries.Include(c=>c.Answers).ToList();
+            var entries = _context.Entries.Include(c=>c.Answers).Include(c=>c.User).ToList();
             return entries;
         }
 

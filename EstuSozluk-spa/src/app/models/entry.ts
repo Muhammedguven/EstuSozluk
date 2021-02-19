@@ -1,4 +1,5 @@
 import { Answer } from './answer';
+import { User } from './user';
 
 export class Entry {
   id: number | undefined;
@@ -8,14 +9,6 @@ export class Entry {
   userId: number | undefined;
   date: Date | undefined;
   answers: Answer[] | undefined;
-
-  /*public constructor(id: number, title: string, userId: number, answers: Answer[], description: string, date: Date ) {
-    this.id = id;
-    this.title = title;
-    this.userId = userId;
-    this.answers = answers;
-    this.description = description;
-    this.date = date;
-  }*/
+  user: User = new User();
 }
 
