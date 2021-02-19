@@ -1,0 +1,47 @@
+CREATE TABLE [dbo].[Users] (
+
+    [Id]           INT             IDENTITY (1, 1) NOT NULL,
+
+    [PasswordHash] VARBINARY (MAX) NULL,
+
+    [PasswordSalt] VARBINARY (MAX) NULL,
+
+    [Username]     NVARCHAR (MAX)  NULL,
+
+    [Email]     NVARCHAR (MAX)  NULL,
+
+    [Faculty]     NVARCHAR (MAX)  NULL,
+
+);
+
+
+
+CREATE TABLE [dbo].[Entries] (
+
+    [Id]          INT            IDENTITY (1, 1) NOT NULL,
+
+    [Description] NVARCHAR (MAX) NULL,
+
+    [Title]        NVARCHAR (MAX) NULL,
+
+    [Date]        DateTime NULL,
+
+    [UserId]      INT            NOT NULL
+
+);
+
+
+
+CREATE TABLE [dbo].[Answers] (
+
+    [Id]          INT            IDENTITY (1, 1) NOT NULL,
+
+    [Description] NVARCHAR (MAX) NULL,
+
+    [Date]        DateTime NULL,
+
+    [EntryId]      INT            NOT NULL,
+
+    [UserId]      INT            NOT NULL
+
+);
