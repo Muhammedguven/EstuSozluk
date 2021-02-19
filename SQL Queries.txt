@@ -24,6 +24,8 @@ CREATE TABLE [dbo].[Entries] (
 
     [Title]        NVARCHAR (MAX) NULL,
 
+    [Category]        NVARCHAR (MAX) NULL,
+
     [Date]        DateTime NULL,
 
     [UserId]      INT            NOT NULL

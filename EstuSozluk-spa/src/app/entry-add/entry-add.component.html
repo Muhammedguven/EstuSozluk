@@ -1,0 +1,27 @@
+<div class="container">
+  <form [formGroup]="entryAddForm" (ngSubmit)="addEntry()">
+    <div class="form-group">
+      <label for="title" class="lead">Entry Başlığı</label>
+      <input class="form-control" id="title" name="title" placeholder="Entry Başlığı Yazınız.." required
+        formControlName="title" />
+    </div>
+    <div class="form-group">
+      <label for="category" class="lead">Fakülte</label>
+      <select class="form-control" id="category" name="category" required formControlName="category"
+        [spellcheck]="true">
+        <option value="Mühendislik">Mühendislik</option>
+        <option value="Havacılık">Havacılık</option>
+        <option value="BESYO">BESYO</option>
+        <option value="HAZIRLIK">HAZIRLIK</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="description" class="lead">Entry Detay</label>
+      <textarea class="form-control" id="description" name="description" rows="14" required
+        placeholder="'Entry Detaylarını Yazınız..'" formControlName="description">
+        </textarea>
+
+    </div>
+    <button type="submit" class="btn btn-lg btn-primary btn-block" [disabled]="!entryAddForm.valid">Ekle</button>
+  </form>
+</div>

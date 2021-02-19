@@ -1,0 +1,98 @@
+<div >
+  <h2 class="text-primary text-center font-weight-bold">
+    {{entry.category}}
+  </h2>
+
+  <div class="card mb-1 container pt-4">
+
+    <div class="card-body p-2 p-sm-3">
+
+      <div class="media forum-item ">
+
+        <div class="media-body">
+
+          <div class=" align-self-start">
+
+            <h4>
+              <p style="color:  #375a7f;" data-toggle="collapse" data-target=".forum-content"
+                class="lead text-center font-weight-bold">{{entry.title}}</p>
+            </h4>
+          </div>
+          <p class="text-default font-weight-bold">
+            {{entry.description}}
+          </p>
+          <a href="javascript:void(0)">{{entry.userId}}</a>
+
+        </div>
+        <div class=" small text-center align-self-end">
+
+
+          <span class="text-default ">{{entry.date}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div *ngFor="let answer of entry.answers" class="card mb-1 container" style="background-color: #375a7f;">
+    <div  class="card-body p-2 p-sm-3 ">
+      <div  class="media forum-item ">
+        <div class="media-body">
+          <p class="text-default font-weight-bold">
+            {{answer.description}}
+          </p>
+          <a href="javascript:void(0)">{{answer.userId}}</a>
+
+        </div>
+        <div class=" small text-center align-self-end">
+
+
+          <span class="text-default ">{{answer.date}}</span>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container align-self-end">
+    <form [formGroup]="answerAddForm" (ngSubmit)="addAnswer()">
+      <div class="form-group">
+        <label for="description" class="lead">Entry Cevap</label>
+        <textarea class="form-control" id="description" name="description" rows="14" required
+          placeholder="'Entry Cevabınızı Yazınız..'" formControlName="description">
+        </textarea>
+
+      </div>
+      <button type="submit" class="btn btn-lg btn-primary btn-block" [disabled]="!answerAddForm.valid">Ekle</button>
+    </form>
+  </div>
+</div>
+
+<style>
+  @media (max-width: 767.98px) {
+    .inner-sidebar {
+      left: -235px;
+    }
+
+    .inner-main {
+      left: 0;
+    }
+
+    .inner-expand .main-body {
+      overflow: hidden;
+    }
+
+    .inner-expand .inner-wrapper {
+      transform: translate3d(235px, 0, 0);
+    }
+  }
+
+  .card {
+    word-wrap: break-word;
+    background-color: lightslategray;
+    border-radius: .25rem;
+
+  }
+</style>
