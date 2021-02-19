@@ -14,6 +14,8 @@ namespace EstuSozlukAPI.Data
 
         List<Entry> GetEntries();
 
+        List<Entry> GetEntriesByCategory(string category);
+
         List<Answer> GetAnswersByEntry(int entryId);
         Entry GetEntryById(int entryId);
         Answer GetAnswer(int id);

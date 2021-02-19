@@ -44,6 +44,12 @@ namespace EstuSozlukAPI.Data
             return entries;
         }
 
+        public List<Entry> GetEntriesByCategory(string category)
+        {
+            var entries = _context.Entries.Where(e => e.Category == category).Include(c => c.Answers).ToList();
+            return entries;
+        }
+
         public Entry GetEntryById(int entryId)
         {
             var entry = _context.Entries.Include(e => e.Answers).FirstOrDefault(e => e.Id == entryId);

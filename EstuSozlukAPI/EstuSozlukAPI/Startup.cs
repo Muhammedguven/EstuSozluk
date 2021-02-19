@@ -39,6 +39,7 @@ namespace EstuSozlukAPI
             services.AddMvc().AddNewtonsoftJson();
             services.AddControllers().AddNewtonsoftJson();
             services.AddMvc().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddCors();
             services.AddControllers();
@@ -65,17 +66,22 @@ namespace EstuSozlukAPI
             }
 
             app.UseHttpsRedirection();
-
-            app.UseRouting();
-
-            app.UseAuthorization();
             
+            app.UseRouting();
+            app.UseHttpsRedirection();
+
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
+            app.UseAuthorization();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Entries}/{action=Index}/{id?}");
+                    pattern: "{controller}/{action}/{id?}");
             });
 
         }

@@ -20,9 +20,18 @@ namespace EstuSozlukAPI.Controllers
             _appRepository = appRepository;
         }
 
+        [HttpGet]
         public ActionResult GetEntries()
         {
             var entries = _appRepository.GetEntries();
+            return Ok(entries);
+        }
+
+        [HttpGet]
+        [Route("faculty")]
+        public ActionResult GetEntriesByCategory(string category)
+        {
+            var entries = _appRepository.GetEntriesByCategory(category);
             return Ok(entries);
         }
 
@@ -30,6 +39,7 @@ namespace EstuSozlukAPI.Controllers
         [Route("add")]
         public ActionResult Add([FromBody]Entry entry)
         {
+            entry.Date = DateTime.Now;
             _appRepository.Add(entry);
             _appRepository.SaveAll();
             return Ok(entry);

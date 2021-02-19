@@ -32,17 +32,17 @@ namespace EstuSozlukAPI.Controllers
 
         [HttpPost]
         [Route("add")]
-        public ActionResult Add(int entryId, [FromBody] Answer answer)
+        public ActionResult Add([FromBody] Answer answer)
         {
-            var entry = _appRepository.GetEntryById(entryId);
-
+            /*var entry = _appRepository.GetEntryById(entryId);
+            
             if (entry == null)
             {
                 return BadRequest("Could not find the entry");
-            }
+            }*/
 
-           // var currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
-
+            // var currentUserId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value);
+            answer.Date = DateTime.Now;
             _appRepository.Add(answer);
             _appRepository.SaveAll();
             return Ok(answer);

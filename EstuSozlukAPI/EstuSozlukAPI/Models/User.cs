@@ -10,6 +10,7 @@ namespace EstuSozlukAPI.Models
         public User()
         {
             Entries = new List<Entry>();
+            Answers = new List<Answer>();
         }
 
         public int Id { get; set; }
@@ -24,5 +25,6 @@ namespace EstuSozlukAPI.Models
         public byte[] PasswordSalt { get; set; }
 
         public List<Entry> Entries { get; set; }
+        public List<Answer> Answers { get; set; }
     }
 }
