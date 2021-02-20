@@ -1,3 +1,4 @@
+import { FacultyComponent } from './faculty/faculty.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { appRoutes } from './routes';
 import { RouterModule } from '@angular/router';
@@ -15,14 +16,15 @@ import { AlertifyService } from './services/alertify.service';
 import { RegisterComponent } from './register/register.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     NavComponent,
     EntryComponent,
     EntryDetailComponent,
     EntryAddComponent,
     LoginPageComponent,
-      RegisterComponent
+      RegisterComponent,
+      FacultyComponent
    ],
   imports: [
     BrowserModule,

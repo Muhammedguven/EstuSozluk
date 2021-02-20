@@ -50,7 +50,7 @@ export class AuthService {
     localStorage.removeItem(this.TOKEN_KEY);
     this.alertifyService.error('Sistemden çıkış yapıldı');
     this.router.navigateByUrl('/login-page');
-    setTimeout(function(){ window.location.reload(); }, 1500);
+    setTimeout(function(){ window.location.reload(); }, 1);
 
 
   }

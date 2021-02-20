@@ -1,5 +1,6 @@
 <main role="form">
 <div class="container text-center">
+  <img class="navbar-brand" height="250px" src="https://lh3.googleusercontent.com/proxy/lOzieIOtlXfZR0-mvs3JHL3vKJ3zdf1LpKrY3bx945obpAr_WsRsH8dyH0w976V75XXVY1UaBj9b0XaqSu7cAA6tb-TeQSTYoYY"/>
 <h1>Estü Sözlük</h1>
   <form  #loginForm="ngForm" (ngSubmit)="login()" class="  my-lg-2">
     <div class="form-group ">
@@ -10,9 +11,11 @@
     <input class="form-control lead" name="password"
     [(ngModel)]="loginUser.password" required type="password" placeholder="Şifre">
     </div>
-    <button class="btn btn-info form-control"    type="submit">Giriş</button>
+    <button class="btn btn-info form-control "    type="submit">Giriş</button>
+
+    <a class="nav-link btn btn-warning mt-2" routerLink="/register">Kayıt ol</a>
   </form>
-  <a class="nav-link btn btn-warning" routerLink="/register">Kayıt ol</a>
+
 
 </div>
 </main>

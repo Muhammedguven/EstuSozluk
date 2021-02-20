@@ -21,13 +21,14 @@
           <p class="text-default font-weight-bold">
             {{entry.description}}
           </p>
-          <a href="javascript:void(0)">{{entry.userId}}</a>
+          <strong><em><a href="javascript:void(0)"
+            class="justify-content-end">{{entry.user.userName}}</a></em></strong>
 
         </div>
         <div class=" small text-center align-self-end">
 
 
-          <span class="text-default ">{{entry.date}}</span>
+          <span class="text-default ">{{entry.date | date:'short'}}</span>
         </div>
       </div>
     </div>
@@ -41,13 +42,14 @@
           <p class="text-default font-weight-bold">
             {{answer.description}}
           </p>
-          <a href="javascript:void(0)">{{answer.userId}}</a>
+          <strong><em><a href="javascript:void(0)"
+            class="justify-content-end">{{entry.user.userName}}</a></em></strong>
 
         </div>
         <div class=" small text-center align-self-end">
 
 
-          <span class="text-default ">{{answer.date}}</span>
+          <span class="text-default ">{{answer.date | date:'short'}}</span>
 
         </div>
 

@@ -13,6 +13,11 @@ export class EntryService {
   getEntries(): Observable<Entry[]> {
     return this.httpClient.get<Entry[]>(this.path + 'entries');
   }
+  getEntriesByCategory(category: string): Observable<Entry[]> {
+    return this.httpClient.get<Entry[]>(
+      this.path + 'entries/faculty/?category=' + category
+    );
+  }
   getEntryById(entryId: number): Observable<Entry> {
     return this.httpClient.get<Entry>(
       this.path + 'entries/detail/?id=' + entryId

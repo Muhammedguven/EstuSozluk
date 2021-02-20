@@ -28,8 +28,5 @@ export class FacultyComponent implements OnInit {
       });
     });
   }
-  getEntriesByCategory(category: string){
-
-  }
 }
 

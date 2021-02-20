@@ -1,4 +1,5 @@
 <nav *ngIf="name > 0" class="navbar navbar-expand-lg navbar-dark bg-primary navbar-inverse">
+  <img class="navbar-brand" height="50px" src="https://lh3.googleusercontent.com/proxy/lOzieIOtlXfZR0-mvs3JHL3vKJ3zdf1LpKrY3bx945obpAr_WsRsH8dyH0w976V75XXVY1UaBj9b0XaqSu7cAA6tb-TeQSTYoYY"/>
   <a class="navbar-brand" routerLink="entry">Estü Sözlük</a>
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#myNavigation" aria-controls="myNavigation" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -14,21 +15,22 @@
         <a class="nav-link" routerLink="entryadd" routerLinkActive="active">Entry Ekle</a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" routerLink="entryadd" routerLinkActive="active">Mühendislik</a>
+        <a class="nav-link" routerLink="faculty/muhendislik" routerLinkActive="active">Mühendislik</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="entryadd" routerLinkActive="active">Havacılık</a>
+        <a class="nav-link" routerLink="faculty/havacilik" routerLinkActive="active">Havacılık</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="entryadd" routerLinkActive="active">BESYO</a>
+        <a class="nav-link" routerLink="faculty/besyo" routerLinkActive="active">BESYO</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="entryadd" routerLinkActive="active">Hazırlık</a>
+        <a class="nav-link" routerLink="faculty/hazirlik" routerLinkActive="active">Hazırlık</a>
       </li>
 
     </ul>
-    <ul class="navbar-nav">
-      <li class="nav-item nav-link">   {{user.userName}}</li>
+    <ul class="navbar-nav ">
+      <img class="nav-item align-self-center" height="25" width="25" src="https://upload.wikimedia.org/wikipedia/commons/7/70/User_icon_BLACK-01.png"/>
+      <li class="nav-item nav-link align-self-center">   {{user.userName}}</li>
       <li class="nav-item"> <button class="btn btn-warning my-2 my-sm-0"  (click)="logOut()"  type="submit">Çıkış</button></li>
     </ul>
 

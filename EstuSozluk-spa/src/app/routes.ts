@@ -1,3 +1,4 @@
+import { FacultyComponent } from './faculty/faculty.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { EntryAddComponent } from './entry-add/entry-add.component';
@@ -11,5 +12,6 @@ export const appRoutes: Routes = [
  {path: 'entryadd', component: EntryAddComponent},
  {path: 'login-page', component: LoginPageComponent},
  {path: 'register', component: RegisterComponent},
+ {path: 'faculty/:category', component: FacultyComponent},
  { path: '**', redirectTo: 'login-page', pathMatch: 'full'}
 ];
