@@ -1,0 +1,28 @@
+<div class="card mb-3 ">
+  <div class="card-body p-2 p-sm-3 ">
+    <div class="media forum-item">
+      <div class="media-body ">
+        <div class=" align-self-center">
+          <a *ngFor="let entry of entries" routerLink="/entryDetail/{{entry.id}}"
+            class="mt-1 list-group-item list-group-item-action flex-column align-items-start rounded-right rounded-left active ">
+
+
+            <div class="d-flex w-100 justify-content-end">
+
+              <strong><em><a href="javascript:void(0)"
+                    class="justify-content-end">{{entry.user.userName}}</a></em></strong>
+            </div>
+
+            <p class="mb-1">{{entry.title}}</p>
+            <div class="d-flex w-100 justify-content-end">
+
+              <small>{{entry.date | date:'short'}}</small>
+            </div>
+
+
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

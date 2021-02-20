@@ -34,25 +34,32 @@ namespace EstuSozlukAPI.Data
 
         public List<Answer> GetAnswersByEntry(int entryId)
         {
-            var answers = _context.Answers.Where(p => p.EntryId == entryId).ToList();
+            var answers = _context.Answers.Where(p => p.EntryId == entryId).Include(c => c.User).ToList();
+            answers.OrderBy(e => e.Date);
+            
             return answers;
         }
 
         public List<Entry> GetEntries()
         {
-            var entries = _context.Entries.Include(c=>c.Answers).Include(c=>c.User).ToList();
+            var entries = _context.Entries.Include(c => c.Answers).Include(c => c.User).ToList();
+            entries.OrderBy(e => e.Date);
+            entries.Reverse();
             return entries;
         }
 
         public List<Entry> GetEntriesByCategory(string category)
         {
-            var entries = _context.Entries.Where(e => e.Category == category).Include(c => c.Answers).ToList();
+            var entries = _context.Entries.Where(e => e.Category == category).Include(c => c.User).ToList();
+            entries.OrderBy(e => e.Date);
+            entries.Reverse();
             return entries;
         }
 
         public Entry GetEntryById(int entryId)
         {
-            var entry = _context.Entries.Include(e => e.Answers).FirstOrDefault(e => e.Id == entryId);
+            var entry = _context.Entries.Include(c => c.User).FirstOrDefault(e => e.Id == entryId);
+
             return entry;
         }
 
