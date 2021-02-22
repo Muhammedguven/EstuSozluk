@@ -30,7 +30,6 @@ export class AuthService {
         this.decodedToken = this.jwtHelper.decodeToken(data.toString());
         this.alertifyService.success('Sisteme giriş yapıldı');
         this.router.navigateByUrl('/entry');
-        setTimeout(function(){ window.location.reload(); }, 500);
       });
   }
   register(registerUser: RegisterUser) {
@@ -50,7 +49,7 @@ export class AuthService {
     localStorage.removeItem(this.TOKEN_KEY);
     this.alertifyService.error('Sistemden çıkış yapıldı');
     this.router.navigateByUrl('/login-page');
-    setTimeout(function(){ window.location.reload(); }, 1);
+
 
 
   }

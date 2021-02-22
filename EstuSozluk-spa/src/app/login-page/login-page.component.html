@@ -1,21 +1,22 @@
-<main role="form">
 <div class="container text-center">
-  <img class="navbar-brand" height="250px" src="https://lh3.googleusercontent.com/proxy/lOzieIOtlXfZR0-mvs3JHL3vKJ3zdf1LpKrY3bx945obpAr_WsRsH8dyH0w976V75XXVY1UaBj9b0XaqSu7cAA6tb-TeQSTYoYY"/>
-<h1>Estü Sözlük</h1>
-  <form  #loginForm="ngForm" (ngSubmit)="login()" class="  my-lg-2">
-    <div class="form-group ">
-    <input class="form-control lead" name="userName"
-    [(ngModel)]="loginUser.userName" required type="text" placeholder="Kullanıcı Adı">
-    </div>
-    <div class="form-group">
-    <input class="form-control lead" name="password"
-    [(ngModel)]="loginUser.password" required type="password" placeholder="Şifre">
-    </div>
-    <button class="btn btn-info form-control "    type="submit">Giriş</button>
+  <div class="cursor">
+    <img class="navbar-brand" height="250px"
+      src="https://lh3.googleusercontent.com/proxy/5H5Ih8eQ3rTYQ8kmnJBa2GxqYlsOTCp0OPQgWm8nXAGJkMy_tkhkBEV5ByB-6ihcBxbkVcMBeFnCoawMvQa4ZwAkrYP8loRYivI" />
+  </div>
+  <h1 style="text-shadow: 25em;">Estü Sözlük</h1>
+  <div style="padding-left: 25%; padding-right: 25%; text-align: center;">
+    <form #loginForm="ngForm" (ngSubmit)="login()" class="my-lg-2 align-self: center">
+      <div class="form-group ">
+        <input class="form-control" name="userName" [(ngModel)]="loginUser.userName" required type="text"
+          placeholder="Kullanıcı Adı">
+      </div>
+      <div class="form-group">
+        <input class="form-control" name="password" [(ngModel)]="loginUser.password" required type="password"
+          placeholder="Şifre">
+      </div>
+      <button class="btn btn-info form-control " [disabled]="!loginForm.valid" type="submit">Giriş</button>
 
-    <a class="nav-link btn btn-warning mt-2" routerLink="/register">Kayıt ol</a>
-  </form>
+      <a class="nav-link btn btn-warning mt-2" routerLink="/register">Kayıt ol</a>
+    </form>
 
-
-</div>
-</main>
+  </div>

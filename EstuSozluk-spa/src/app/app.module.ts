@@ -23,9 +23,9 @@ import { RegisterComponent } from './register/register.component';
     EntryDetailComponent,
     EntryAddComponent,
     LoginPageComponent,
-      RegisterComponent,
-      FacultyComponent
-   ],
+    RegisterComponent,
+    FacultyComponent,
+  ],
   imports: [
     BrowserModule,
     HttpClientModule,

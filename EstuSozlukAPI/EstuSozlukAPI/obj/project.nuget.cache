@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QU+PQUs1ycK6W1DCYLMtX0mpN4WuoYvt9u1WADGyT5c4n5SVWfr08u21/hbx73NMSL4JRAPDoo9fQMlWmfGUnQ==",
+  "dgSpecHash": "4C/aGt1z2GNjBf46LiTwGBcQHP9FqC6b5ETVcraFxslNEd2CPPkw2rUXPuLciR/s5ToWz4gAjL/tXyTmkGykQw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\mguve\\source\\repos\\EstuSozlukAPI\\EstuSozlukAPI\\EstuSozlukAPI.csproj",
+  "projectFilePath": "C:\\Users\\mguve\\Documents\\GitHub\\EstuSozluk\\EstuSozlukAPI\\EstuSozlukAPI\\EstuSozlukAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mguve\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.3\\microsoft.aspnetcore.authentication.jwtbearer.5.0.3.nupkg.sha512",
     "C:\\Users\\mguve\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\5.0.3\\microsoft.aspnetcore.jsonpatch.5.0.3.nupkg.sha512",

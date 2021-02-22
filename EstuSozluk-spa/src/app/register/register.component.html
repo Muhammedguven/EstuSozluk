@@ -1,36 +1,41 @@
 <main role="form">
   <div class="container text-center">
-    <img class="navbar-brand" height="250px" src="https://lh3.googleusercontent.com/proxy/lOzieIOtlXfZR0-mvs3JHL3vKJ3zdf1LpKrY3bx945obpAr_WsRsH8dyH0w976V75XXVY1UaBj9b0XaqSu7cAA6tb-TeQSTYoYY"/>
+    <div class="cursor">
+      <img class="navbar-brand" height="250px"
+        src="https://lh3.googleusercontent.com/proxy/5H5Ih8eQ3rTYQ8kmnJBa2GxqYlsOTCp0OPQgWm8nXAGJkMy_tkhkBEV5ByB-6ihcBxbkVcMBeFnCoawMvQa4ZwAkrYP8loRYivI" />
+    </div>
     <h1>Estü Sözlük</h1>
-<form [formGroup]="registerForm" (ngSubmit)="register()" class="form-register">
+    <div style="padding-left: 25%; padding-right: 25%; text-align: center;">
+      <form [formGroup]="registerForm" (ngSubmit)="register()" class="form-register">
 
-  <div class="form-group">
-    <input type="text" id="userName" name="userName" formControlName="userName" class="form-control" placeholder="Kullanıcı adı"
-      autofocus>
-  </div>
-  <div class="form-group">
-    <input type="text" id="email" type="email" name="email" formControlName="email" class="form-control" placeholder="Email"
-      autofocus>
-  </div>
-  <div class="form-group">
-    <select type="text" id="faculty" name="faculty" formControlName="faculty" class="form-control"
-      autofocus>
-      <option value="" selected disabled>Fakülte</option>
-      <option value="Mühendislik">Mühendislik</option>
-      <option value="Havacılık">Havacılık</option>
-      <option value="BESYO">BESYO</option>
-      <option value="HAZIRLIK">HAZIRLIK</option>
-  </select>
-  </div>
-  <div class="form-group">
-    <input type="password" id="password" name="password" formControlName="password" class="form-control" placeholder="Şifre">
-  </div>
-  <div class="form-group">
-    <input type="password" id="confirmPassword" name="confirmPassword" formControlName="confirmPassword" class="form-control"
-      placeholder="Şifre">
+        <div class="form-group">
+          <input type="text" id="userName" name="userName" formControlName="userName" class="form-control"
+            placeholder="Kullanıcı adı" autofocus>
+        </div>
+        <div class="form-group">
+          <input type="text" id="email" type="email" name="email" formControlName="email" class="form-control"
+            placeholder="Email" autofocus>
+        </div>
+        <div class="form-group">
+          <select type="text" id="faculty" name="faculty" formControlName="faculty" class="form-control" autofocus>
+            <option value="" selected disabled>Fakülte</option>
+            <option value="Mühendislik">Mühendislik</option>
+            <option value="Havacılık">Havacılık</option>
+            <option value="BESYO">BESYO</option>
+            <option value="HAZIRLIK">HAZIRLIK</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input type="password" id="password" name="password" formControlName="password" class="form-control"
+            placeholder="Şifre">
+        </div>
+        <div class="form-group">
+          <input type="password" id="confirmPassword" name="confirmPassword" formControlName="confirmPassword"
+            class="form-control" placeholder="Şifre(tekrar)">
 
+        </div>
+        <button class="btn btn-lg btn-info btn-block" [disabled]="!registerForm.valid" type="submit">Register</button>
+      </form>
+    </div>
   </div>
-  <button class="btn btn-lg btn-info btn-block" [disabled]="!registerForm.valid" type="submit">Register</button>
-</form>
-</div>
 </main>

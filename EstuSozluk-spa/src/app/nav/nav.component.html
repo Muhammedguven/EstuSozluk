@@ -1,9 +1,13 @@
-<nav *ngIf="name > 0" class="navbar navbar-expand-lg navbar-dark bg-primary navbar-inverse">
-  <img class="navbar-brand" height="50px" src="https://lh3.googleusercontent.com/proxy/lOzieIOtlXfZR0-mvs3JHL3vKJ3zdf1LpKrY3bx945obpAr_WsRsH8dyH0w976V75XXVY1UaBj9b0XaqSu7cAA6tb-TeQSTYoYY"/>
-  <a class="navbar-brand" routerLink="entry">Estü Sözlük</a>
-  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#myNavigation" aria-controls="myNavigation" aria-expanded="false" aria-label="Toggle navigation">
+<nav *ngIf="isAuthenticated" class="navbar navbar-expand-lg navbar-dark bg-primary navbar-inverse">
+  <div class="cursor">
+    <img class="navbar-brand" height="50px"
+      src="https://lh3.googleusercontent.com/proxy/5H5Ih8eQ3rTYQ8kmnJBa2GxqYlsOTCp0OPQgWm8nXAGJkMy_tkhkBEV5ByB-6ihcBxbkVcMBeFnCoawMvQa4ZwAkrYP8loRYivI" />
+    <a class="navbar-brand" routerLink="entry">Estü Sözlük</a>
+  </div>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#myNavigation"
+    aria-controls="myNavigation" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-    </button>
+  </button>
 
   <div class="navbar-collapse collapse show" id="navbarColor01">
     <ul class="navbar-nav mr-auto">
@@ -29,9 +33,11 @@
 
     </ul>
     <ul class="navbar-nav ">
-      <img class="nav-item align-self-center" height="25" width="25" src="https://upload.wikimedia.org/wikipedia/commons/7/70/User_icon_BLACK-01.png"/>
-      <li class="nav-item nav-link align-self-center">   {{user.userName}}</li>
-      <li class="nav-item"> <button class="btn btn-warning my-2 my-sm-0"  (click)="logOut()"  type="submit">Çıkış</button></li>
+      <img class="nav-item align-self-center" height="25" width="25"
+        src="https://upload.wikimedia.org/wikipedia/commons/7/70/User_icon_BLACK-01.png" />
+      <li class="nav-item nav-link align-self-center"> {{name}}</li>
+      <li class="nav-item"> <button class="btn btn-warning my-2 my-sm-0" (click)="logOut()" type="submit">Çıkış</button>
+      </li>
     </ul>
 
 

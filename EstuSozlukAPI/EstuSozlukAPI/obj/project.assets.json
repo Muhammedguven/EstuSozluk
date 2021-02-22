@@ -5602,11 +5602,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mguve\\source\\repos\\EstuSozlukAPI\\EstuSozlukAPI\\EstuSozlukAPI.csproj",
+      "projectUniqueName": "C:\\Users\\mguve\\Documents\\GitHub\\EstuSozluk\\EstuSozlukAPI\\EstuSozlukAPI\\EstuSozlukAPI.csproj",
       "projectName": "EstuSozlukAPI",
-      "projectPath": "C:\\Users\\mguve\\source\\repos\\EstuSozlukAPI\\EstuSozlukAPI\\EstuSozlukAPI.csproj",
+      "projectPath": "C:\\Users\\mguve\\Documents\\GitHub\\EstuSozluk\\EstuSozlukAPI\\EstuSozlukAPI\\EstuSozlukAPI.csproj",
       "packagesPath": "C:\\Users\\mguve\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mguve\\source\\repos\\EstuSozlukAPI\\EstuSozlukAPI\\obj\\",
+      "outputPath": "C:\\Users\\mguve\\Documents\\GitHub\\EstuSozluk\\EstuSozlukAPI\\EstuSozlukAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Microsoft\\Xamarin\\NuGet\\"
