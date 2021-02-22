@@ -26,3 +26,7 @@ Firstly create a <b>MSSQL database</b> using queries which are inside of the ```
 then open the <b>EstuSozluk-spa</b> project and write terminal ```npm install``` and write ng ```ng serve --open```
 
 then ```run``` <b>Web API project</b>. The app is ready for you :)
+
+<video width="360" height="320" autoplay="autoplay">
+  <source src="estusozluk.mp4" type="video/mp4" />
+</video>
