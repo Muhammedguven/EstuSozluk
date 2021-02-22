@@ -1,6 +1,6 @@
 # Estü Süzlük
 
- ##This app is a forum website like Ekşi Sözlük developed for Eskişehir Technical University's Students. Every user can publish entries about any faculty.
+ ### This app is a forum website like Ekşi Sözlük developed for Eskişehir Technical University's Students. Every user can publish entries about any faculty.
  
  <ol>
   <header>Back End:</header>
@@ -16,7 +16,6 @@
   <li>Font-Awesome</li>
   <li>Angular(as TypeScript)</li>
 </ol>
-# 
 
 
 
